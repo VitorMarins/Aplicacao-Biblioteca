@@ -19,10 +19,10 @@ app.use(helmet());
 
 // Middleware para habilitar CORS
 const corsOptions = {
-    origin: '',
+    origin: 'https://app-biblioteca.netlify.app',
     optionsSuccessStatus: 200
 };
-app.use(cors());
+app.use(cors(corsOptions));
 
 // Middleware para log de requisições
 app.use(morgan('dev'));
